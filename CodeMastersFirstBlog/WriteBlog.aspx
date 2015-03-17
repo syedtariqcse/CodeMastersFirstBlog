@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WriteBlog.aspx.cs" Inherits="CodeMastersFirstBlog.WriteBlog" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WriteBlog.aspx.cs" Inherits="CodeMastersFirstBlog.WriteBlog" ValidateRequest="false"%>
 
 <%--<!DOCTYPE html>
 
@@ -111,16 +111,16 @@
 
             <div class="row">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <form>
+                    <!form>
                         <div class="form-group">
                             <label for="articleTitleTextBox">Title </label>
                             <%--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">--%>
                             <asp:TextBox ID="articleTitleTextBox" class="form-control" runat="server" placeholder="Title"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="articleKeywordTextBox">Keywords </label>
+                            <label for="articleAuthorTextBox">Author </label>
                             <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
-                            <asp:TextBox ID="articleKeywordTextBox" class="form-control" runat="server" placeholder="Keywords..."></asp:TextBox>
+                            <asp:TextBox ID="articleAuthorTextBox" class="form-control" runat="server" placeholder="Author Name..."></asp:TextBox>
                         </div>
                         
                         <div class="form-group">
@@ -129,7 +129,10 @@
                         </div>
                         <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
                         <%--<button type="submit" class="btn btn-default">Submit</button>--%>
-                    </form>
+
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+                    </!form>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
