@@ -1,0 +1,52 @@
+﻿.headerSection {
+    height: 140px;
+    background: black;
+    color: gold;
+}
+
+.menuBarProperty {
+    height: 60px;
+    background: black;
+}
+.socialNetworkIconBar {
+
+    background: black;
+}
+
+.putRight {
+     font-family: 'Lobster', cursive;
+}
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+}
+.button-customize {
+    padding-right: 0px;
+}
+
+.rightAside {
+    border-color: black;
+}
+
+.paginationProperty {
+
+}
+
+.footerProperty {
+    height: 80px;
+    background: black;
+    color: gold;
+}
+
