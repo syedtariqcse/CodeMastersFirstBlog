@@ -13,5 +13,11 @@ namespace CodeMastersFirstBlog
         {
 
         }
+
+        protected void createArticleButton_Click(object sender, EventArgs e)
+        {
+            string articleTitle = articleTitleTextBox.Text;
+            string
+        }
     }
 }
