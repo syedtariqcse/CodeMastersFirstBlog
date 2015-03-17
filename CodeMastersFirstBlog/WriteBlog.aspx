@@ -113,23 +113,19 @@
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Title </label>
+                            <label for="articleTitleTextBox">Title </label>
                             <%--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">--%>
                             <asp:TextBox ID="articleTitleTextBox" class="form-control" runat="server" placeholder="Title"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Keywords </label>
+                            <label for="articleKeywordTextBox">Keywords </label>
                             <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
                             <asp:TextBox ID="articleKeywordTextBox" class="form-control" runat="server" placeholder="Keywords..."></asp:TextBox>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Photos </label>
-                            <asp:Image ID="articleImage" runat="server" Height="100px" Width="100px" />
-                            <asp:FileUpload ID="articleImageFileUpload" runat="server" />
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Description </label>
-                            <textarea id="articleDescriptionTextArea" cols="20" rows="2"></textarea>
+                            <label for="articleDescriptionTextArea">Description </label>
+                            <textarea id="articleDescriptionTextArea"  runat="server" cols="20" rows="2"></textarea>
                         </div>
                         <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
                         <%--<button type="submit" class="btn btn-default">Submit</button>--%>
