@@ -22,7 +22,7 @@
 <head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Yellow Coders</title>
+    <title> Write an Article </title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -73,6 +73,7 @@
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
+                                            
                                             <li><asp:HyperLink ID="WriteArticleOnThisHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">Write Article</asp:HyperLink></li>
                                             <li><asp:HyperLink ID="CSharpOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">C#</asp:HyperLink></li>
                                             <li><asp:HyperLink ID="ASPDOTNETOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">ASP.NET</asp:HyperLink></li>
@@ -135,8 +136,8 @@
                         </div>
                         <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
                         <%--<button type="submit" class="btn btn-default">Submit</button>--%>
-
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <br/>
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 
                     <%--</form>--%>
                 </div>

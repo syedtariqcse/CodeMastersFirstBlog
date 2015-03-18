@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CodeMastersFirstBlog.Default" ValidateRequest="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewArticles.aspx.cs" Inherits="CodeMastersFirstBlog.NewArticles" ValidateRequest="false" %>
 
 <%--<!DOCTYPE html>
 
@@ -22,7 +22,7 @@
 <head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Yellow Coders Home </title>
+    <title> New Articles </title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -123,7 +123,7 @@
             <div class="row">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                     <blockquote>
-                        <asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="NewArticles.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>
+                        <asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>
                         <footer>
                             <cite title="Source Title">
                                 <asp:Label ID="newPostsHeaderDateLabel" runat="server" Text="Label"></asp:Label></cite>
@@ -175,13 +175,53 @@
                     <asp:Button ID="fourthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fourthReadMoreButton_Click" />
 
 
-                    <blockquote>
-                        <asp:HyperLink ID="MostViewedPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>Most Viewed Posts</h2></asp:HyperLink>
-                        <footer>
-                            <cite title="Source Title">
-                                <asp:Label ID="mostViewedPostsLabel" runat="server" Text="Label"></asp:Label></cite>
-                        </footer>
-                    </blockquote>
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel5" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel5" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="newPostsAuthorLabel5" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel5" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="fifthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="fifthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fifthReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel6" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel6" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="newPostsAuthorLabel6" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel6" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="sixthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="sixthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="sixthReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel7" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel7" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="newPostsAuthorLabel7" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel7" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="seventhIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="seventhReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="seventhReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel8" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel8" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="newPostsAuthorLabel8" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel8" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="eightIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="eightReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="eightReadMoreButton_Click" />
+                    <br />
+
+
+
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
@@ -218,6 +258,34 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div align="center" style="color: black;">
+                        <b>
+                            <asp:Label ID="numberOfPostViewedLabel" runat="server" Text="Label"></asp:Label>
+                        </b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div align="center" style="color: gold;">
+                        
+                        <asp:Button ID="seeMorePostsButton" runat="server" Text="See More Posts" BackColor="black" OnClick="seeMorePostsButton_Click" />
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div align="center" style="color: black;">
+                        <br/>
+                    </div>
+                </div>
+            </div>
+
             <%--<div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
                     <nav>
@@ -236,10 +304,11 @@
 
             <footer class="row footerProperty">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; color: gray">
-                           Editor-in-Chief: CodeMasters<br/>
-                           Cell:+8801921039325, +8801744761629<br/>
-                           Email: <font color="">engr.syedtariqcse@gmail.com</font><br/>
-                           Copyright © <font color="">www.yellowcoders.com</font> 2015. All Right ® reserved<br/>
+                    Editor-in-Chief: CodeMasters<br />
+                    Cell:+8801921039325, +8801744761629<br />
+                    Email: <font color="">engr.syedtariqcse@gmail.com</font>
+                    <br />
+                    Copyright © <font color="">www.yellowcoders.com</font>2015. All Right ® reserved<br />
                 </div>
             </footer>
         </div>

@@ -26,7 +26,7 @@ namespace CodeMastersFirstBlog
 
             if (WriteAnArticle(anArticle))
             {
-                Label1.Text = "InsertionSuccessFull";
+                Label1.Text = "Article is created successfully!";
             }
             else
             {

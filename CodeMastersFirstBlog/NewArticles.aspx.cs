@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace CodeMastersFirstBlog
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class NewArticles : System.Web.UI.Page
     {
         int index = 0;
         private int counter = 0;
@@ -51,6 +51,16 @@ namespace CodeMastersFirstBlog
 
             counter = newPostsList.Count;
 
+            //Viewed Post Counting
+            if (counter>=8)
+            {
+                numberOfPostViewedLabel.Text = "Posts " + (8 + index).ToString() + " of " + counter.ToString();
+            }
+            else
+            {
+                numberOfPostViewedLabel.Text = "Posts " + counter.ToString() + " of " + counter.ToString();
+            }
+
             //Display First Article 
             if (counter - index >= 1)
             {
@@ -81,7 +91,7 @@ namespace CodeMastersFirstBlog
             }
 
             //Display Second Article
-            if (counter - index >= 2)
+            if (counter-index>=2)
             {
                 secondIDHolderTextBox.Text = newPostsList[index + 1].ArticleID.ToString();
                 newPostsTitleLabel2.Text = newPostsList[index + 1].ArticleTitle;
@@ -131,11 +141,7 @@ namespace CodeMastersFirstBlog
             }
             else
             {
-                newPostsTitleLabel3.Text = "";
-                newPostsDateLabel3.Text = "";
-                newPostsAuthorLabel3.Text = "";
-                newPostsDescriptionLabel3.Text = "";
-                thirdReadMoreButton.Visible = false;
+                
             }
 
             //Display Fourth Article
@@ -160,11 +166,123 @@ namespace CodeMastersFirstBlog
             }
             else
             {
-                newPostsTitleLabel4.Text = "";
-                newPostsDateLabel4.Text = "";
-                newPostsAuthorLabel4.Text = "";
-                newPostsDescriptionLabel4.Text = "";
-                fourthReadMoreButton.Visible = false;
+                
+            }
+
+            //Display Fifth Article
+            if (counter - index >= 5)
+            {
+                fifthIDHolderTextBox.Text = newPostsList[index + 4].ArticleID.ToString();
+                newPostsTitleLabel5.Text = newPostsList[index + 4].ArticleTitle;
+                newPostsDateLabel5.Text = newPostsList[index + 4].ArticleDate;
+                newPostsAuthorLabel5.Text = "Author: " + newPostsList[index + 4].ArticleAuthor;
+
+                string tempDesc9 = newPostsList[index + 4].ArticleDescription;
+                string tempDesc10 = "";
+                for (int i = 0; i < tempDesc9.Length; i++)
+                {
+                    tempDesc10 += tempDesc9[i];
+                    if (i > 250)
+                    {
+                        break;
+                    }
+                }
+                newPostsDescriptionLabel5.Text = Server.HtmlDecode(tempDesc10) + ". . .";
+            }
+            else
+            {
+                newPostsTitleLabel5.Text = "";
+                newPostsDateLabel5.Text = "";
+                newPostsAuthorLabel5.Text = "";
+                newPostsDescriptionLabel5.Text = "";
+                fifthReadMoreButton.Visible = false;
+            }
+
+            //Display Sixth Article
+            if (counter - index >= 6)
+            {
+                sixthIDHolderTextBox.Text = newPostsList[index + 5].ArticleID.ToString();
+                newPostsTitleLabel6.Text = newPostsList[index + 5].ArticleTitle;
+                newPostsDateLabel6.Text = newPostsList[index + 5].ArticleDate;
+                newPostsAuthorLabel6.Text = "Author: " + newPostsList[index + 5].ArticleAuthor;
+
+                string tempDesc11 = newPostsList[index + 5].ArticleDescription;
+                string tempDesc12 = "";
+                for (int i = 0; i < tempDesc11.Length; i++)
+                {
+                    tempDesc12 += tempDesc11[i];
+                    if (i > 250)
+                    {
+                        break;
+                    }
+                }
+                newPostsDescriptionLabel6.Text = Server.HtmlDecode(tempDesc12) + ". . .";
+            }
+            else
+            {
+                newPostsTitleLabel6.Text = "";
+                newPostsDateLabel6.Text = "";
+                newPostsAuthorLabel6.Text = "";
+                newPostsDescriptionLabel6.Text = "";
+                sixthReadMoreButton.Visible = false;
+            }
+
+            //Display Seventh Article
+            if (counter - index >= 7)
+            {
+                seventhIDHolderTextBox.Text = newPostsList[index + 6].ArticleID.ToString();
+                newPostsTitleLabel7.Text = newPostsList[index + 6].ArticleTitle;
+                newPostsDateLabel7.Text = newPostsList[index + 6].ArticleDate;
+                newPostsAuthorLabel7.Text = "Author: " + newPostsList[index + 6].ArticleAuthor;
+
+                string tempDesc13 = newPostsList[index + 6].ArticleDescription;
+                string tempDesc14 = "";
+                for (int i = 0; i < tempDesc13.Length; i++)
+                {
+                    tempDesc14 += tempDesc13[i];
+                    if (i > 250)
+                    {
+                        break;
+                    }
+                }
+                newPostsDescriptionLabel7.Text = Server.HtmlDecode(tempDesc14) + ". . .";
+            }
+            else
+            {
+                newPostsTitleLabel7.Text = "";
+                newPostsDateLabel7.Text = "";
+                newPostsAuthorLabel7.Text = "";
+                newPostsDescriptionLabel7.Text = "";
+                seventhReadMoreButton.Visible = false;
+            }
+
+            //Display Eight Article
+            if (counter - index >= 8)
+            {
+                eightIDHolderTextBox.Text = newPostsList[index + 7].ArticleID.ToString();
+                newPostsTitleLabel8.Text = newPostsList[index + 7].ArticleTitle;
+                newPostsDateLabel8.Text = newPostsList[index + 7].ArticleDate;
+                newPostsAuthorLabel8.Text = "Author: " + newPostsList[index + 7].ArticleAuthor;
+
+                string tempDesc15 = newPostsList[index + 7].ArticleDescription;
+                string tempDesc16 = "";
+                for (int i = 0; i < tempDesc15.Length; i++)
+                {
+                    tempDesc16 += tempDesc15[i];
+                    if (i > 250)
+                    {
+                        break;
+                    }
+                }
+                newPostsDescriptionLabel8.Text = Server.HtmlDecode(tempDesc16) + ". . .";
+            }
+            else
+            {
+                newPostsTitleLabel8.Text = "";
+                newPostsDateLabel8.Text = "";
+                newPostsAuthorLabel8.Text = "";
+                newPostsDescriptionLabel8.Text = "";
+                eightReadMoreButton.Visible = false;
             }
         }
 
@@ -187,6 +305,46 @@ namespace CodeMastersFirstBlog
         {
             Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fourthIDHolderTextBox.Text));
         }
-    }
 
+        protected void fifthReadMoreButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fifthIDHolderTextBox.Text));
+        }
+
+        protected void sixthReadMoreButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(sixthIDHolderTextBox.Text));
+        }
+
+        protected void seventhReadMoreButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(seventhIDHolderTextBox.Text));
+        }
+
+        protected void eightReadMoreButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(eightIDHolderTextBox.Text));
+        }
+
+        protected void seeMorePostsButton_Click(object sender, EventArgs e)
+        {
+            if ((counter - index >= 8))
+            {
+                if ((counter-index < 8))
+                {
+                    index += (counter-index);
+                    GetNewPosts();
+                }
+                else if (counter - index > 8)
+                {
+                    index += 8;
+                    GetNewPosts();
+                }
+                else
+                {
+                    seeMorePostsButton.Enabled = false;
+                }
+            }
+        }
+    }
 }
