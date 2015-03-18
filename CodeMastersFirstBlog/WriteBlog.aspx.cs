@@ -20,7 +20,7 @@ namespace CodeMastersFirstBlog
         {
             string articleTitle = articleTitleTextBox.Text;
             string articleAuthor = articleAuthorTextBox.Text;
-            string articleDescription = articleDescriptionTextArea.InnerText;
+            string articleDescription = articleDescriptionTextArea.InnerHtml;
 
             ArticleWrite anArticle = new ArticleWrite(articleTitle, articleAuthor, articleDescription);
 
@@ -42,7 +42,7 @@ namespace CodeMastersFirstBlog
             DateTime dateTime = DateTime.Now;
 
             //Write insert query
-            string query = "INSERT INTO tbl_article (article_author,article_title,article_description) VALUES('" + anArticle.Title + "','" + anArticle.Author + "','" + anArticle.Description +"')";
+            string query = "INSERT INTO tbl_article (article_author,article_title,article_description, article_date_time) VALUES('" + anArticle.Author + "','" + anArticle.Title + "','" + anArticle.Description + "','" + DateTime.Now + "')";
 
             //Execute query
             SqlCommand command = new SqlCommand(query, connection);

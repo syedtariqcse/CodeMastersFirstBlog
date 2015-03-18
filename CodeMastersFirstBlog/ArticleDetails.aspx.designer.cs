@@ -10,132 +10,132 @@
 namespace CodeMastersFirstBlog {
     
     
-    public partial class WriteBlog {
+    public partial class ArticleDetails {
         
         /// <summary>
-        /// form2 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// HomeOnWriteArticleHyperLink control.
+        /// HomeOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomeOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink HomeOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// WriteArticleOnThisHyperLink control.
+        /// WriteArticleOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink WriteArticleOnThisHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink WriteArticleOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// CSharpOnWriteArticleHyperLink control.
+        /// CSharpOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CSharpOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink CSharpOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// ASPDOTNETOnWriteArticleHyperLink control.
+        /// ASPDOTNETOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ASPDOTNETOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink ASPDOTNETOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// HTML5OnWriteArticleHyperLink control.
+        /// HTML5OnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HTML5OnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink HTML5OnArticleDetailsHyperLink;
         
         /// <summary>
-        /// CSSOnWriteArticleHyperLink control.
+        /// CSSOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CSSOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink CSSOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// BootstrapOnWriteArticleHyperLink control.
+        /// BootstrapOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink BootstrapOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink BootstrapOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// JavaScriptOnWriteArticleHyperLink control.
+        /// JavaScriptOnArticleDetailsHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink JavaScriptOnWriteArticleHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink JavaScriptOnArticleDetailsHyperLink;
         
         /// <summary>
-        /// articleTitleTextBox control.
+        /// selectedPostsTitleLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox articleTitleTextBox;
+        protected global::System.Web.UI.WebControls.Label selectedPostsTitleLabel;
         
         /// <summary>
-        /// articleAuthorTextBox control.
+        /// IDReceiverTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox articleAuthorTextBox;
+        protected global::System.Web.UI.WebControls.TextBox IDReceiverTextBox;
         
         /// <summary>
-        /// articleDescriptionTextArea control.
+        /// selectedPostsDateLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea articleDescriptionTextArea;
+        protected global::System.Web.UI.WebControls.Label selectedPostsDateLabel;
         
         /// <summary>
-        /// createArticleButton control.
+        /// selectedPostsAuthorLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button createArticleButton;
+        protected global::System.Web.UI.WebControls.Label selectedPostsAuthorLabel;
         
         /// <summary>
-        /// Label1 control.
+        /// selectedPostsDescriptionLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label selectedPostsDescriptionLabel;
     }
 }

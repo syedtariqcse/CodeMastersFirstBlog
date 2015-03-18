@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WriteBlog.aspx.cs" Inherits="CodeMastersFirstBlog.WriteBlog" ValidateRequest="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CodeMastersFirstBlog.Default" ValidateRequest="false" %>
 
 <%--<!DOCTYPE html>
 
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
         <div class="container">
 
             <div class="row">
@@ -67,29 +67,34 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <%--<a class="navbar-brand" href="#" style="color: black;">Home</a>--%>
-                                        <li><asp:HyperLink ID="HomeOnWriteArticleHyperLink" NavigateUrl="Default.aspx" class="navbar-brand" style=" color: black;" runat="server">Home</asp:HyperLink></li>
+                                        <li>
+                                            <asp:HyperLink ID="HomeOnThisHyperLink" NavigateUrl="Default.aspx" class="navbar-brand" Style="color: black;" runat="server">Home</asp:HyperLink></li>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
-                                            <li><asp:HyperLink ID="WriteArticleOnThisHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">Write Article</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="CSharpOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">C#</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="ASPDOTNETOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">ASP.NET</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="HTML5OnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">HTML5</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="CSSOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">CSS</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="BootstrapOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">Bootstrap</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="JavaScriptOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">JavaScript</asp:HyperLink></li>
-                                           <%-- <li><asp:HyperLink ID="GitHubOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">GitHub</asp:HyperLink></li>--%>
+                                            <li>
+                                                <asp:HyperLink ID="WriteArticleOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">Write Article</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="CSharpOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">C#</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="ASPDOTNETOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">ASP.NET</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="HTML5OnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">HTML5</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="CSSOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">CSS</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="BootstrapOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">Bootstrap</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="JavaScriptOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">JavaScript</asp:HyperLink></li>
+                                            <%-- <li><asp:HyperLink ID="GitHubOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">GitHub</asp:HyperLink></li>--%>
                                         </ul>
                                         <%--<form id="form2" class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Search">
                                     </div>
                                     <button type="submit" class="btn btn-default" style="background: black; color: gold">Search</button>
-                                </form>--%>
-                                        <%--<asp:FormView ID="FormView1" runat="server">--%>
-
+                                </form>--%>                                        <%--<asp:FormView ID="FormView1" runat="server">--%>
                                         <%--</asp:FormView>--%>
 
                                         <ul class="nav navbar-nav navbar-right">
@@ -117,28 +122,66 @@
 
             <div class="row">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <%--<form>--%>
-                        <div class="form-group">
-                            <label for="articleTitleTextBox">Title </label>
-                            <%--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">--%>
-                            <asp:TextBox ID="articleTitleTextBox" class="form-control" runat="server" placeholder="Title"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="articleAuthorTextBox">Author </label>
-                            <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
-                            <asp:TextBox ID="articleAuthorTextBox" class="form-control" runat="server" placeholder="Author Name..."></asp:TextBox>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="articleDescriptionTextArea">Description </label>
-                            <textarea id="articleDescriptionTextArea"  runat="server" cols="20" rows="2"></textarea>
-                        </div>
-                        <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
-                        <%--<button type="submit" class="btn btn-default">Submit</button>--%>
+                    <blockquote>
+                        <asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>
+                        <footer>
+                            <cite title="Source Title">
+                                <asp:Label ID="newPostsHeaderDateLabel" runat="server" Text="Label"></asp:Label></cite>
+                        </footer>
+                    </blockquote>
 
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel1" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel1" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">Author:
+                        <asp:Label ID="newPostsAuthorLabel1" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel1" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="firstIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="firstReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="firstReadMoreButton_Click" />
 
-                    <%--</form>--%>
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel2" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel2" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">Author:
+                        <asp:Label ID="newPostsAuthorLabel2" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel2" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="secondIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="secondReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="secondReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel3" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel3" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">Author:
+                        <asp:Label ID="newPostsAuthorLabel3" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel3" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="thirdIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="thirdReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="thirdReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="newPostsTitleLabel4" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="newPostsDateLabel4" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">Author:
+                        <asp:Label ID="newPostsAuthorLabel4" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="newPostsDescriptionLabel4" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="fourthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="fourthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fourthReadMoreButton_Click" />
+
+
+                    <blockquote>
+                        <asp:HyperLink ID="MostViewedPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>Most Viewed Posts</h2></asp:HyperLink>
+                        <footer>
+                            <cite title="Source Title">
+                                <asp:Label ID="mostViewedPostsLabel" runat="server" Text="Label"></asp:Label></cite>
+                        </footer>
+                    </blockquote>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
@@ -207,14 +250,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-

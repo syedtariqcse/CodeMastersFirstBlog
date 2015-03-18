@@ -1,21 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WriteBlog.aspx.cs" Inherits="CodeMastersFirstBlog.WriteBlog" ValidateRequest="false"%>
-
-<%--<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>--%>
-
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ArticleDetails.aspx.cs" Inherits="CodeMastersFirstBlog.ArticleDetails" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +16,7 @@
 </head>
 
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
         <div class="container">
 
             <div class="row">
@@ -67,20 +50,27 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <%--<a class="navbar-brand" href="#" style="color: black;">Home</a>--%>
-                                        <li><asp:HyperLink ID="HomeOnWriteArticleHyperLink" NavigateUrl="Default.aspx" class="navbar-brand" style=" color: black;" runat="server">Home</asp:HyperLink></li>
+                                        <li>
+                                            <asp:HyperLink ID="HomeOnArticleDetailsHyperLink" NavigateUrl="Default.aspx" class="navbar-brand" Style="color: black;" runat="server">Home</asp:HyperLink></li>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
-                                            <li><asp:HyperLink ID="WriteArticleOnThisHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">Write Article</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="CSharpOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">C#</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="ASPDOTNETOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">ASP.NET</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="HTML5OnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">HTML5</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="CSSOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">CSS</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="BootstrapOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">Bootstrap</asp:HyperLink></li>
-                                            <li><asp:HyperLink ID="JavaScriptOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">JavaScript</asp:HyperLink></li>
-                                           <%-- <li><asp:HyperLink ID="GitHubOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">GitHub</asp:HyperLink></li>--%>
+                                            <li>
+                                                <asp:HyperLink ID="WriteArticleOnArticleDetailsHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">Write Article</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="CSharpOnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">C#</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="ASPDOTNETOnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">ASP.NET</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="HTML5OnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">HTML5</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="CSSOnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">CSS</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="BootstrapOnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">Bootstrap</asp:HyperLink></li>
+                                            <li>
+                                                <asp:HyperLink ID="JavaScriptOnArticleDetailsHyperLink" NavigateUrl="ArticleDetails.aspx" Style="background: gold; color: black;" runat="server">JavaScript</asp:HyperLink></li>
+                                            <%-- <li><asp:HyperLink ID="GitHubOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">GitHub</asp:HyperLink></li>--%>
                                         </ul>
                                         <%--<form id="form2" class="navbar-form navbar-left" role="search">
                                     <div class="form-group">
@@ -116,29 +106,24 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <%--<form>--%>
-                        <div class="form-group">
-                            <label for="articleTitleTextBox">Title </label>
-                            <%--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">--%>
-                            <asp:TextBox ID="articleTitleTextBox" class="form-control" runat="server" placeholder="Title"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="articleAuthorTextBox">Author </label>
-                            <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
-                            <asp:TextBox ID="articleAuthorTextBox" class="form-control" runat="server" placeholder="Author Name..."></asp:TextBox>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="articleDescriptionTextArea">Description </label>
-                            <textarea id="articleDescriptionTextArea"  runat="server" cols="20" rows="2"></textarea>
-                        </div>
-                        <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
-                        <%--<button type="submit" class="btn btn-default">Submit</button>--%>
-
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
-                    <%--</form>--%>
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" >
+                    
+                    <blockquote >
+                        <%--<asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>--%>
+                        <h3><asp:Label ID="selectedPostsTitleLabel" runat="server" Text="Label"></asp:Label></h3><br/>
+                        <asp:TextBox ID="IDReceiverTextBox" runat="server" Visible="False" Text=""></asp:TextBox>
+                        <footer>
+                            <cite title="Source Title">
+                                <i><asp:Label ID="selectedPostsDateLabel" runat="server" Text="Label"></asp:Label></i><br/>
+                            </cite>
+                            Author: <asp:Label ID="selectedPostsAuthorLabel" runat="server" Text="Label"></asp:Label>
+                        </footer>
+                    </blockquote>
+                    
+                    <span style="color: gray;"></span><br/>
+                    <span style="color: gray;"></span><br/>
+                    <asp:Label ID="selectedPostsDescriptionLabel" runat="server" Text="Label"></asp:Label><br/>
+                    
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
@@ -207,14 +192,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
