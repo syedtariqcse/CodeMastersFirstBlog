@@ -89,14 +89,7 @@
                                                 <asp:HyperLink ID="JavaScriptOnHomeHyperLink" NavigateUrl="WriteBlog.aspx" Style="background: gold; color: black;" runat="server">JavaScript</asp:HyperLink></li>
                                             <%-- <li><asp:HyperLink ID="GitHubOnWriteArticleHyperLink" NavigateUrl="WriteBlog.aspx" style="background: gold; color: black;" runat="server">GitHub</asp:HyperLink></li>--%>
                                         </ul>
-                                        <%--<form id="form2" class="navbar-form navbar-left" role="search">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                    </div>
-                                    <button type="submit" class="btn btn-default" style="background: black; color: gold">Search</button>
-                                </form>--%>                                        <%--<asp:FormView ID="FormView1" runat="server">--%>
-                                        <%--</asp:FormView>--%>
-
+                                        
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="#" style="background: gold; color: black;">Angular Js</a></li>
 
@@ -122,6 +115,7 @@
 
             <div class="row">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                     <%--------------------------------New Posts Section Header Stars Here-------------------------------------------%>
                     <blockquote>
                         <asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="NewArticles.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>
                         <footer>
@@ -129,7 +123,7 @@
                                 <asp:Label ID="newPostsHeaderDateLabel" runat="server" Text="Label"></asp:Label></cite>
                         </footer>
                     </blockquote>
-
+                    <%--------------------------------New Posts Section Display Stars Here-------------------------------------------%>
                     <h3>
                         <asp:Label ID="newPostsTitleLabel1" runat="server" Text="Label"></asp:Label><br />
                     </h3>
@@ -139,17 +133,22 @@
                         <asp:Label ID="newPostsAuthorLabel1" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel1" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="firstIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="firstViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="firstReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="firstReadMoreButton_Click" />
 
                     <h3>
                         <asp:Label ID="newPostsTitleLabel2" runat="server" Text="Label"></asp:Label><br />
                     </h3>
-                    <span style="color: gray;"><i>
-                        <asp:Label ID="newPostsDateLabel2" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <i>
+                            <asp:Label ID="newPostsDateLabel2" runat="server" Text="Label"></asp:Label></i>
+                    </span>
+                    <br />
                     <span style="color: gray;">
                         <asp:Label ID="newPostsAuthorLabel2" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel2" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="secondIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="secondViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="secondReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="secondReadMoreButton_Click" />
 
                     <h3>
@@ -161,6 +160,7 @@
                         <asp:Label ID="newPostsAuthorLabel3" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel3" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="thirdIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="thirdViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="thirdReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="thirdReadMoreButton_Click" />
 
                     <h3>
@@ -172,16 +172,73 @@
                         <asp:Label ID="newPostsAuthorLabel4" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel4" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="fourthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="fourthViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="fourthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fourthReadMoreButton_Click" />
 
-
+                    
+                    <%--------------------------------Most Viewed Posts Section Display Stars Here-------------------------------------------%>
                     <blockquote>
                         <asp:HyperLink ID="MostViewedPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>Most Viewed Posts</h2></asp:HyperLink>
                         <footer>
                             <cite title="Source Title">
-                                <asp:Label ID="mostViewedPostsLabel" runat="server" Text="Label"></asp:Label></cite>
+                                <asp:Label ID="mostViewedPostsHeaderDateLabel" runat="server" Text="Label"></asp:Label></cite>
                         </footer>
                     </blockquote>
+                    
+                    <%--------------------------------Most Viewed Posts Section Header Stars Here-------------------------------------------%>
+                    <h3>
+                        <asp:Label ID="mostViewedPostsTitleLabel1" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="mostViewedPostsDateLabel1" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="mostViewedPostsAuthorLabel1" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="mostViewedPostsDescriptionLabel1" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="firstMVIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="firstMVViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="firstMVReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="firstMVReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="mostViewedPostsTitleLabel2" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;">
+                        <i>
+                            <asp:Label ID="mostViewedPostsDateLabel2" runat="server" Text="Label"></asp:Label></i>
+                    </span>
+                    <br />
+                    <span style="color: gray;">
+                        <asp:Label ID="mostViewedPostsAuthorLabel2" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="mostViewedPostsDescriptionLabel2" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="secondMVIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="secondMVViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="secondMVReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="secondMVReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="mostViewedPostsTitleLabel3" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="mostViewedPostsDateLabel3" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="mostViewedPostsAuthorLabel3" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="mostViewedPostsDescriptionLabel3" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="thirdMVIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="thirdMVViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="thirdMVReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="thirdMVReadMoreButton_Click" />
+
+                    <h3>
+                        <asp:Label ID="mostViewedPostsTitleLabel4" runat="server" Text="Label"></asp:Label><br />
+                    </h3>
+                    <span style="color: gray;"><i>
+                        <asp:Label ID="mostViewedPostsDateLabel4" runat="server" Text="Label"></asp:Label></i></span><br />
+                    <span style="color: gray;">
+                        <asp:Label ID="mostViewedPostsAuthorLabel4" runat="server" Text="Label"></asp:Label></span><br />
+                    <asp:Label ID="mostViewedPostsDescriptionLabel4" runat="server" Text="Label"></asp:Label><br />
+                    <asp:TextBox ID="fourthMVIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="fourthMVViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:Button ID="fourthMVReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fourthMVReadMoreButton_Click" />
+
+                    
+
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
@@ -236,10 +293,11 @@
 
             <footer class="row footerProperty">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; color: gray">
-                           Editor-in-Chief: CodeMasters<br/>
-                           Cell:+8801921039325, +8801744761629<br/>
-                           Email: <font color="">engr.syedtariqcse@gmail.com</font><br/>
-                           Copyright © <font color="">www.yellowcoders.com</font> 2015. All Right ® reserved<br/>
+                    Editor-in-Chief: CodeMasters<br />
+                    Cell:+8801921039325, +8801744761629<br />
+                    Email: <font color="">engr.syedtariqcse@gmail.com</font>
+                    <br />
+                    Copyright © <font color="">www.yellowcoders.com</font>2015. All Right ® reserved<br />
                 </div>
             </footer>
         </div>

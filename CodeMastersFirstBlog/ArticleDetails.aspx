@@ -5,14 +5,12 @@
 <head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title> Article Details </title>
+    <title>Article Details </title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="Content/style1.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon/ProjectOneFavicon.png">
-    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-    <script>tinymce.init({ selector: 'textarea' });</script>
 </head>
 
 <body>
@@ -106,25 +104,112 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" >
-                    
-                    <blockquote >
-                        <%--<asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>--%>
-                        <h3><asp:Label ID="selectedPostsTitleLabel" runat="server" Text="Label"></asp:Label></h3><br/>
-                        <asp:TextBox ID="IDReceiverTextBox" runat="server" Visible="False" Text=""></asp:TextBox>
-                        <footer>
-                            <cite title="Source Title">
-                                <i><asp:Label ID="selectedPostsDateLabel" runat="server" Text="Label"></asp:Label></i><br/>
-                            </cite>
-                            Author: <asp:Label ID="selectedPostsAuthorLabel" runat="server" Text="Label"></asp:Label>
-                        </footer>
-                    </blockquote>
-                    
-                    <span style="color: gray;"></span><br/>
-                    <span style="color: gray;"></span><br/>
-                    <asp:Label ID="selectedPostsDescriptionLabel" runat="server" Text="Label"></asp:Label><br/>
-                    
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <blockquote>
+                                <%--<asp:HyperLink ID="NewPostsOnHomeHyperLink" NavigateUrl="Default.aspx" Style="color: black;" runat="server"><h2>New Posts</h2></asp:HyperLink>--%>
+                                <h3>
+                                    <asp:Label ID="selectedPostsTitleLabel" runat="server" Text="Label"></asp:Label></h3>
+                                <br />
+                                <asp:TextBox ID="IDReceiverTextBox" runat="server" Visible="False" Text=""></asp:TextBox>
+                                <footer>
+                                    <cite title="Source Title">
+                                        <i>
+                                            <asp:Label ID="selectedPostsDateLabel" runat="server" Text="Label"></asp:Label></i><br />
+                                    </cite>
+                                    Author:
+                            <asp:Label ID="selectedPostsAuthorLabel" runat="server" Text="Label"></asp:Label>
+                                </footer>
+                            </blockquote>
+                            <asp:Label ID="selectedPostsDescriptionLabel" runat="server" Text="Label"></asp:Label><br />
+                        </div>
+                    </div>
+                    <%------------------Comment Section Starts Here----------------------------------------------%>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <%--------------------------Show Comments Section---------------------------------%>
+                                <asp:Label ID="commentByLabel1" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel1" runat="server" Text="Label"></asp:Label><br />
+                                <asp:TextBox ID="commentTextBox1" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel2" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel2" runat="server" Text="Label"></asp:Label><br />
+                                <asp:TextBox ID="commentTextBox2" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel3" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel3" runat="server" Text="Label"></asp:Label><br />
+                                <asp:TextBox ID="commentTextBox3" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel4" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel4" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="commentTextBox4" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel5" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel5" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="commentTextBox5" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel6" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel6" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="commentTextBox6" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel7" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel7" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="commentTextBox7" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <asp:Label ID="commentByLabel8" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="commentDateTimeLabel8" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="commentTextBox8" TextMode="MultiLine" CssClass="form-control commentBoxProperty" runat="server"></asp:TextBox><br />
+
+                                <div align="center" style="color: black;">
+                                    <b>
+                                        <asp:Label ID="numberOfCommentViewedLabel" runat="server" Text="Label"></asp:Label>
+                                    </b>
+                                </div>
+
+                            </div>
+                            <%----------------------------See More Comments Section--------------------------------------%>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div align="center" style="color: gold;">
+                                        <%--<asp:Button ID="seePreviousCommentsButton" runat="server" Text="<< See Previous Comments" BackColor="black" OnClick="seePreviousCommentsButton_Click" />--%>
+                                        <asp:Button ID="seeMoreCommentsButton" runat="server" Text="See More Comments" BackColor="black" OnClick="seeMoreCommentsButton_Click" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div align="center" style="color: black;">
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <%--------------------------Create Comments Section---------------------------------%>
+                            <div style="background: gainsboro">
+                                <br />
+                                <div class="form-group" style="margin-left: 20px; margin-right: 20px">
+                                    <label for="newCommentByTextBox">Comment By: </label>
+                                    <asp:TextBox ID="newCommentByTextBox" class="form-control" runat="server" placeholder="Comment by. . ."></asp:TextBox>
+                                </div>
+                                <div class="form-group" style="margin-left: 20px; margin-right: 20px">
+                                    <label for="createNewCommentTextBox">Comment: </label>
+                                    <asp:TextBox ID="createNewCommentTextBox" class="form-control" runat="server" placeholder="Enter your comment here..."></asp:TextBox>
+                                </div>
+                                <div align="center" style="margin-left: 20px; margin-right: 20px">
+                                    <asp:Button ID="createNewCommentButton" class="btn btn-default" runat="server" Text="Comment" OnClick="createNewCommentButton_Click" />
+                                    <br />
+                                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                    <br />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
+
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px">
@@ -178,10 +263,11 @@
 
             <footer class="row footerProperty">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; color: gray">
-                           Editor-in-Chief: CodeMasters<br/>
-                           Cell:+8801921039325, +8801744761629<br/>
-                           Email: <font color="">engr.syedtariqcse@gmail.com</font><br/>
-                           Copyright © <font color="">www.yellowcoders.com</font> 2015. All Right ® reserved<br/>
+                    Editor-in-Chief: CodeMasters<br />
+                    Cell:+8801921039325, +8801744761629<br />
+                    Email: <font color="">engr.syedtariqcse@gmail.com</font>
+                    <br />
+                    Copyright © <font color="">www.yellowcoders.com</font>2015. All Right ® reserved<br />
                 </div>
             </footer>
         </div>

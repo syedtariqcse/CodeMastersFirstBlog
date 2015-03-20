@@ -139,6 +139,7 @@
                         <asp:Label ID="newPostsAuthorLabel1" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel1" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="firstIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="firstViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="firstReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="firstReadMoreButton_Click" />
 
                     <h3>
@@ -150,6 +151,7 @@
                         <asp:Label ID="newPostsAuthorLabel2" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel2" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="secondIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="secondViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="secondReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="secondReadMoreButton_Click" />
 
                     <h3>
@@ -161,6 +163,7 @@
                         <asp:Label ID="newPostsAuthorLabel3" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel3" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="thirdIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="thirdViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="thirdReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="thirdReadMoreButton_Click" />
 
                     <h3>
@@ -172,6 +175,7 @@
                         <asp:Label ID="newPostsAuthorLabel4" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel4" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="fourthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="fourthViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="fourthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fourthReadMoreButton_Click" />
 
 
@@ -184,6 +188,7 @@
                         <asp:Label ID="newPostsAuthorLabel5" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel5" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="fifthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="fifthViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="fifthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="fifthReadMoreButton_Click" />
 
                     <h3>
@@ -195,6 +200,7 @@
                         <asp:Label ID="newPostsAuthorLabel6" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel6" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="sixthIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="sixthViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="sixthReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="sixthReadMoreButton_Click" />
 
                     <h3>
@@ -206,6 +212,7 @@
                         <asp:Label ID="newPostsAuthorLabel7" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel7" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="seventhIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="seventhViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="seventhReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="seventhReadMoreButton_Click" />
 
                     <h3>
@@ -217,6 +224,7 @@
                         <asp:Label ID="newPostsAuthorLabel8" runat="server" Text="Label"></asp:Label></span><br />
                     <asp:Label ID="newPostsDescriptionLabel8" runat="server" Text="Label"></asp:Label><br />
                     <asp:TextBox ID="eightIDHolderTextBox" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="eightViewerHolderTextBox" runat="server" Visible="False"></asp:TextBox>
                     <asp:Button ID="eightReadMoreButton" runat="server" Text="Read More" BackColor="gray" BorderStyle="None" OnClick="eightReadMoreButton_Click" />
                     <br />
 

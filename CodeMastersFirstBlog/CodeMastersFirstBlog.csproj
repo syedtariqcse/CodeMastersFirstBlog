@@ -103,6 +103,8 @@
       <DependentUpon>ArticleDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ArticleWrite.cs" />
+    <Compile Include="CommentRead.cs" />
+    <Compile Include="CommentWrite.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

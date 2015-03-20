@@ -132,7 +132,7 @@
                         
                         <div class="form-group">
                             <label for="articleDescriptionTextArea">Description </label>
-                            <textarea id="articleDescriptionTextArea"  runat="server" cols="20" rows="2"></textarea>
+                            <textarea id="articleDescriptionTextArea"  runat="server" cols="20" rows="20"></textarea>
                         </div>
                         <asp:Button ID="createArticleButton" class="btn btn-default" runat="server" Text="Create Article" OnClick="createArticleButton_Click" />
                         <%--<button type="submit" class="btn btn-default">Submit</button>--%>

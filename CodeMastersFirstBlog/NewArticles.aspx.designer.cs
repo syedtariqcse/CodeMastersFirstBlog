@@ -157,6 +157,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox firstIDHolderTextBox;
         
         /// <summary>
+        /// firstViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox firstViewerHolderTextBox;
+        
+        /// <summary>
         /// firstReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -209,6 +218,15 @@ namespace CodeMastersFirstBlog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox secondIDHolderTextBox;
+        
+        /// <summary>
+        /// secondViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox secondViewerHolderTextBox;
         
         /// <summary>
         /// secondReadMoreButton control.
@@ -265,6 +283,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox thirdIDHolderTextBox;
         
         /// <summary>
+        /// thirdViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox thirdViewerHolderTextBox;
+        
+        /// <summary>
         /// thirdReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -317,6 +344,15 @@ namespace CodeMastersFirstBlog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox fourthIDHolderTextBox;
+        
+        /// <summary>
+        /// fourthViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fourthViewerHolderTextBox;
         
         /// <summary>
         /// fourthReadMoreButton control.
@@ -373,6 +409,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox fifthIDHolderTextBox;
         
         /// <summary>
+        /// fifthViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fifthViewerHolderTextBox;
+        
+        /// <summary>
         /// fifthReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -425,6 +470,15 @@ namespace CodeMastersFirstBlog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox sixthIDHolderTextBox;
+        
+        /// <summary>
+        /// sixthViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sixthViewerHolderTextBox;
         
         /// <summary>
         /// sixthReadMoreButton control.
@@ -481,6 +535,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox seventhIDHolderTextBox;
         
         /// <summary>
+        /// seventhViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox seventhViewerHolderTextBox;
+        
+        /// <summary>
         /// seventhReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -533,6 +596,15 @@ namespace CodeMastersFirstBlog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox eightIDHolderTextBox;
+        
+        /// <summary>
+        /// eightViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox eightViewerHolderTextBox;
         
         /// <summary>
         /// eightReadMoreButton control.

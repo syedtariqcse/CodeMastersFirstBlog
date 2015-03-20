@@ -43,6 +43,7 @@ namespace CodeMastersFirstBlog
                 anArticleData.ArticleAuthor = reader["article_author"].ToString();
                 anArticleData.ArticleDescription = reader["article_description"].ToString();
                 anArticleData.ArticleDate = reader["article_date_time"].ToString();
+                anArticleData.ArticleViewer = Convert.ToInt32(reader["article_viewer"]);
                 newPostsList.Add(anArticleData);
             }
             reader.Close();
@@ -65,6 +66,7 @@ namespace CodeMastersFirstBlog
             if (counter - index >= 1)
             {
                 firstIDHolderTextBox.Text = newPostsList[index].ArticleID.ToString();
+                firstViewerHolderTextBox.Text = newPostsList[index].ArticleViewer.ToString();
                 newPostsTitleLabel1.Text = newPostsList[index].ArticleTitle;
                 newPostsDateLabel1.Text = newPostsList[index].ArticleDate;
                 newPostsAuthorLabel1.Text = "Author: " + newPostsList[index].ArticleAuthor;
@@ -91,9 +93,10 @@ namespace CodeMastersFirstBlog
             }
 
             //Display Second Article
-            if (counter-index>=2)
+            if (counter-index >=2)
             {
                 secondIDHolderTextBox.Text = newPostsList[index + 1].ArticleID.ToString();
+                secondViewerHolderTextBox.Text = newPostsList[index + 1].ArticleViewer.ToString();
                 newPostsTitleLabel2.Text = newPostsList[index + 1].ArticleTitle;
                 newPostsDateLabel2.Text = newPostsList[index + 1].ArticleDate;
                 newPostsAuthorLabel2.Text = "Author: " + newPostsList[index + 1].ArticleAuthor;
@@ -123,6 +126,7 @@ namespace CodeMastersFirstBlog
             if (counter - index >= 3)
             {
                 thirdIDHolderTextBox.Text = newPostsList[index + 2].ArticleID.ToString();
+                thirdViewerHolderTextBox.Text = newPostsList[index + 2].ArticleViewer.ToString();
                 newPostsTitleLabel3.Text = newPostsList[index + 2].ArticleTitle;
                 newPostsDateLabel3.Text = newPostsList[index + 2].ArticleDate;
                 newPostsAuthorLabel3.Text = "Author: " + newPostsList[index + 2].ArticleAuthor;
@@ -141,13 +145,18 @@ namespace CodeMastersFirstBlog
             }
             else
             {
-                
+                newPostsTitleLabel3.Text = "";
+                newPostsDateLabel3.Text = "";
+                newPostsAuthorLabel3.Text = "";
+                newPostsDescriptionLabel3.Text = "";
+                thirdReadMoreButton.Visible = false;
             }
 
             //Display Fourth Article
             if (counter - index >= 4)
             {
                 fourthIDHolderTextBox.Text = newPostsList[index + 3].ArticleID.ToString();
+                fourthViewerHolderTextBox.Text = newPostsList[index + 3].ArticleViewer.ToString();
                 newPostsTitleLabel4.Text = newPostsList[index + 3].ArticleTitle;
                 newPostsDateLabel4.Text = newPostsList[index + 3].ArticleDate;
                 newPostsAuthorLabel4.Text = "Author: " + newPostsList[index + 3].ArticleAuthor;
@@ -166,13 +175,18 @@ namespace CodeMastersFirstBlog
             }
             else
             {
-                
+                newPostsTitleLabel4.Text = "";
+                newPostsDateLabel4.Text = "";
+                newPostsAuthorLabel4.Text = "";
+                newPostsDescriptionLabel4.Text = "";
+                fourthReadMoreButton.Visible = false;
             }
 
             //Display Fifth Article
             if (counter - index >= 5)
             {
                 fifthIDHolderTextBox.Text = newPostsList[index + 4].ArticleID.ToString();
+                fifthViewerHolderTextBox.Text = newPostsList[index + 4].ArticleViewer.ToString();
                 newPostsTitleLabel5.Text = newPostsList[index + 4].ArticleTitle;
                 newPostsDateLabel5.Text = newPostsList[index + 4].ArticleDate;
                 newPostsAuthorLabel5.Text = "Author: " + newPostsList[index + 4].ArticleAuthor;
@@ -202,6 +216,7 @@ namespace CodeMastersFirstBlog
             if (counter - index >= 6)
             {
                 sixthIDHolderTextBox.Text = newPostsList[index + 5].ArticleID.ToString();
+                sixthViewerHolderTextBox.Text = newPostsList[index + 5].ArticleViewer.ToString();
                 newPostsTitleLabel6.Text = newPostsList[index + 5].ArticleTitle;
                 newPostsDateLabel6.Text = newPostsList[index + 5].ArticleDate;
                 newPostsAuthorLabel6.Text = "Author: " + newPostsList[index + 5].ArticleAuthor;
@@ -231,6 +246,7 @@ namespace CodeMastersFirstBlog
             if (counter - index >= 7)
             {
                 seventhIDHolderTextBox.Text = newPostsList[index + 6].ArticleID.ToString();
+                seventhViewerHolderTextBox.Text = newPostsList[index + 6].ArticleViewer.ToString();
                 newPostsTitleLabel7.Text = newPostsList[index + 6].ArticleTitle;
                 newPostsDateLabel7.Text = newPostsList[index + 6].ArticleDate;
                 newPostsAuthorLabel7.Text = "Author: " + newPostsList[index + 6].ArticleAuthor;
@@ -260,6 +276,7 @@ namespace CodeMastersFirstBlog
             if (counter - index >= 8)
             {
                 eightIDHolderTextBox.Text = newPostsList[index + 7].ArticleID.ToString();
+                eightViewerHolderTextBox.Text = newPostsList[index + 7].ArticleViewer.ToString();
                 newPostsTitleLabel8.Text = newPostsList[index + 7].ArticleTitle;
                 newPostsDateLabel8.Text = newPostsList[index + 7].ArticleDate;
                 newPostsAuthorLabel8.Text = "Author: " + newPostsList[index + 7].ArticleAuthor;
@@ -288,42 +305,50 @@ namespace CodeMastersFirstBlog
 
         protected void firstReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(firstIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(firstIDHolderTextBox.Text), Convert.ToInt32(firstViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(firstIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(firstViewerHolderTextBox.Text));
         }
 
         protected void secondReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(secondIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(secondIDHolderTextBox.Text), Convert.ToInt32(secondViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(secondIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(secondViewerHolderTextBox.Text));
         }
 
         protected void thirdReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(thirdIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(thirdIDHolderTextBox.Text), Convert.ToInt32(thirdViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(thirdIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(thirdViewerHolderTextBox.Text));
         }
 
         protected void fourthReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fourthIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(fourthIDHolderTextBox.Text), Convert.ToInt32(fourthViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fourthIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(fourthViewerHolderTextBox.Text));
         }
 
         protected void fifthReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fifthIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(fifthIDHolderTextBox.Text), Convert.ToInt32(fifthViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(fifthIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(fifthViewerHolderTextBox.Text));
         }
 
         protected void sixthReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(sixthIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(sixthIDHolderTextBox.Text), Convert.ToInt32(sixthViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(sixthIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(sixthViewerHolderTextBox.Text));
         }
 
         protected void seventhReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(seventhIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(seventhIDHolderTextBox.Text), Convert.ToInt32(seventhViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(seventhIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(seventhViewerHolderTextBox.Text));
         }
 
         protected void eightReadMoreButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(eightIDHolderTextBox.Text));
+            VisitorCounter(Convert.ToInt32(eightIDHolderTextBox.Text), Convert.ToInt32(eightViewerHolderTextBox.Text));
+            Response.Redirect("ArticleDetails.aspx?SelectedArticleID=" + Server.UrlEncode(eightIDHolderTextBox.Text) + "& SelectedArticleViewer=" + Server.UrlEncode(eightViewerHolderTextBox.Text));
         }
 
         protected void seeMorePostsButton_Click(object sender, EventArgs e)
@@ -344,6 +369,26 @@ namespace CodeMastersFirstBlog
                 {
                     seeMorePostsButton.Enabled = false;
                 }
+            }
+        }
+
+        public void VisitorCounter(int selectedID, int viewer)
+        {
+            string connectionString = WebConfigurationManager.ConnectionStrings["CodeMastersFirstBlogConnectionString"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "UPDATE tbl_article SET article_viewer='" + (viewer + 1) + "' WHERE article_id='" + selectedID + "'";
+
+            //Execute query
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+            int rowAffected = command.ExecuteNonQuery();
+            connection.Close();
+
+            if (rowAffected > 0)
+            {
+
             }
         }
     }

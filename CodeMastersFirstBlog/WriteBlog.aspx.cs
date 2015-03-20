@@ -42,7 +42,7 @@ namespace CodeMastersFirstBlog
             DateTime dateTime = DateTime.Now;
 
             //Write insert query
-            string query = "INSERT INTO tbl_article (article_author,article_title,article_description, article_date_time) VALUES('" + anArticle.Author + "','" + anArticle.Title + "','" + anArticle.Description + "','" + DateTime.Now + "')";
+            string query = "INSERT INTO tbl_article (article_author,article_title,article_description, article_date_time, article_viewer) VALUES('" + anArticle.Author + "','" + anArticle.Title + "','" + anArticle.Description + "','" + DateTime.Now + "','" + 0 + "')";
 
             //Execute query
             SqlCommand command = new SqlCommand(query, connection);

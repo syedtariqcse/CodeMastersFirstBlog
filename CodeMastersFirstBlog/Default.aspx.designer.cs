@@ -157,6 +157,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox firstIDHolderTextBox;
         
         /// <summary>
+        /// firstViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox firstViewerHolderTextBox;
+        
+        /// <summary>
         /// firstReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -209,6 +218,15 @@ namespace CodeMastersFirstBlog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox secondIDHolderTextBox;
+        
+        /// <summary>
+        /// secondViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox secondViewerHolderTextBox;
         
         /// <summary>
         /// secondReadMoreButton control.
@@ -265,6 +283,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox thirdIDHolderTextBox;
         
         /// <summary>
+        /// thirdViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox thirdViewerHolderTextBox;
+        
+        /// <summary>
         /// thirdReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -319,6 +346,15 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.TextBox fourthIDHolderTextBox;
         
         /// <summary>
+        /// fourthViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fourthViewerHolderTextBox;
+        
+        /// <summary>
         /// fourthReadMoreButton control.
         /// </summary>
         /// <remarks>
@@ -337,12 +373,264 @@ namespace CodeMastersFirstBlog {
         protected global::System.Web.UI.WebControls.HyperLink MostViewedPostsOnHomeHyperLink;
         
         /// <summary>
-        /// mostViewedPostsLabel control.
+        /// mostViewedPostsHeaderDateLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mostViewedPostsLabel;
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsHeaderDateLabel;
+        
+        /// <summary>
+        /// mostViewedPostsTitleLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsTitleLabel1;
+        
+        /// <summary>
+        /// mostViewedPostsDateLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDateLabel1;
+        
+        /// <summary>
+        /// mostViewedPostsAuthorLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsAuthorLabel1;
+        
+        /// <summary>
+        /// mostViewedPostsDescriptionLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDescriptionLabel1;
+        
+        /// <summary>
+        /// firstMVIDHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox firstMVIDHolderTextBox;
+        
+        /// <summary>
+        /// firstMVViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox firstMVViewerHolderTextBox;
+        
+        /// <summary>
+        /// firstMVReadMoreButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button firstMVReadMoreButton;
+        
+        /// <summary>
+        /// mostViewedPostsTitleLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsTitleLabel2;
+        
+        /// <summary>
+        /// mostViewedPostsDateLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDateLabel2;
+        
+        /// <summary>
+        /// mostViewedPostsAuthorLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsAuthorLabel2;
+        
+        /// <summary>
+        /// mostViewedPostsDescriptionLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDescriptionLabel2;
+        
+        /// <summary>
+        /// secondMVIDHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox secondMVIDHolderTextBox;
+        
+        /// <summary>
+        /// secondMVViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox secondMVViewerHolderTextBox;
+        
+        /// <summary>
+        /// secondMVReadMoreButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button secondMVReadMoreButton;
+        
+        /// <summary>
+        /// mostViewedPostsTitleLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsTitleLabel3;
+        
+        /// <summary>
+        /// mostViewedPostsDateLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDateLabel3;
+        
+        /// <summary>
+        /// mostViewedPostsAuthorLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsAuthorLabel3;
+        
+        /// <summary>
+        /// mostViewedPostsDescriptionLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDescriptionLabel3;
+        
+        /// <summary>
+        /// thirdMVIDHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox thirdMVIDHolderTextBox;
+        
+        /// <summary>
+        /// thirdMVViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox thirdMVViewerHolderTextBox;
+        
+        /// <summary>
+        /// thirdMVReadMoreButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button thirdMVReadMoreButton;
+        
+        /// <summary>
+        /// mostViewedPostsTitleLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsTitleLabel4;
+        
+        /// <summary>
+        /// mostViewedPostsDateLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDateLabel4;
+        
+        /// <summary>
+        /// mostViewedPostsAuthorLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsAuthorLabel4;
+        
+        /// <summary>
+        /// mostViewedPostsDescriptionLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mostViewedPostsDescriptionLabel4;
+        
+        /// <summary>
+        /// fourthMVIDHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fourthMVIDHolderTextBox;
+        
+        /// <summary>
+        /// fourthMVViewerHolderTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fourthMVViewerHolderTextBox;
+        
+        /// <summary>
+        /// fourthMVReadMoreButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button fourthMVReadMoreButton;
     }
 }
